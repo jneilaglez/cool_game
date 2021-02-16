@@ -71,6 +71,12 @@ First step is building the images.
 > docker socket of the host to use docker command internally. This has a 
 > restriction, before building it docker-compose need the gid of the 
 > docker group passed as argument
+> In Linux case
+> 
+>$ cat /etc/group | grep docker 
+> 
+> docker:x:993:<host_user>
+
 
 With the next command docker-compose builds all containers
 
@@ -210,6 +216,7 @@ in the pipeline.
   possibility to execute tests partially
 * Use a real name for the documentation images
 * Script to clean containerized solution
+* Run in other OS (MacOS and Windows)
 
 # Misc
 
